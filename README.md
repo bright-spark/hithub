@@ -1,2 +1,2 @@
-# hithub.com
-HitHub YouTube Player
+# hithub.com remixed
+HitHub YouTube Player Remixed by @bleedinyou on YT
