@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Installable progressive web app playing an industrial cyber punk YouTube remix">
-    <meta name="keywords" content="Industrial, Gothic, Cyber Punk, Music Videos, Remix, YouTube Player, Playlist, Progressive Web App, PWA, HTML, JavaScript">
+    <meta name="keywords"
+        content="Industrial, Gothic, Cyber Punk, Music Videos, Remix, YouTube Player, Playlist, Progressive Web App, PWA, HTML, JavaScript">
     <meta name="author" content="Martin Myburgh">
     <meta name="robots" content="index, nofollow">
     <meta name="revisit-after" content="7 days">
@@ -15,7 +16,7 @@
     <meta name="distribution" content="global">
     <meta name="rating" content="general">
     <meta name="referrer" content="no-referrer">
-    <meta name="theme-color" content="#121212">
+    <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Remixed">
@@ -28,13 +29,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@bleedinyou">
     <meta name="twitter:title" content="Remixed">
-    <meta name="twitter:description" content="Installable progressive web app playing an industrial cyber punk YouTube remix">
+    <meta name="twitter:description"
+        content="Installable progressive web app playing an industrial cyber punk YouTube remix">
     <meta name="twitter:image" content="https://remixed.co.za/img/remixedrave.jpg">
     <meta property="og:title" content="Remixed" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://remixed.co.za/index.html" />
     <meta property="og:image" content="https://remixed.co.za/img/remixedrave.jpg" />
-    <meta property="og:description" content="Installable progressive web app playing an industrial cyber punk YouTube remix" />
+    <meta property="og:description"
+        content="Installable progressive web app playing an industrial cyber punk YouTube remix" />
     <meta property="og:site_name" content="Remixed" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="fr_FR" />
@@ -50,15 +53,16 @@
       base-uri 'self'; 
       form-action 'self'; 
       report-uri /csp-violation-report-endpoint;">
-    
+
     <title>Remixed</title>
     <style nonce="2726c7f26c">
-        html, body {
+        html,
+        body {
             width: 100%;
             height: 100%;
             overflow: hidden;
             margin: 0;
-            background-color: #121212;
+            background-color: #000000;
             font-size: 12px;
         }
 
@@ -68,7 +72,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #121212;
+            background-color: #000000;
             z-index: 9999;
         }
 
@@ -83,28 +87,30 @@
     </style>
     <script nonce="2726c7f26c">
         // Initialize GoSquared analytics with anonymized IP
-        !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};
-        d=s.createElement(q);d.src='//d1l6p2sc9645hc.cloudfront.net/gosquared.js';
-        q=s.getElementsByTagName(q)[0];q.parentNode.insertBefore(d,q)}(window,document,'script','_gs');
+        !function (g, s, q, r, d) {
+            r = g[r] = g[r] || function () { (r.q = r.q || []).push(arguments) };
+            d = s.createElement(q); d.src = '//d1l6p2sc9645hc.cloudfront.net/gosquared.js';
+            q = s.getElementsByTagName(q)[0]; q.parentNode.insertBefore(d, q)
+        }(window, document, 'script', '_gs');
         _gs('GSN-731670-U');
         _gs('set', 'anonymizeIP', true);
     </script>
     <script nonce="2726c7f26c">
         // Register Cloudflare Web Analytics
-        (function() {
-          var script = document.createElement("script");
-          script.src = "https://static.cloudflareinsights.com/beacon.min.js";
-          script.setAttribute("data-cf-beacon", '{"token": "YOUR_CLOUDFLARE_ANALYTICS_TOKEN"}');
-          document.head.appendChild(script);
+        (function () {
+            var script = document.createElement("script");
+            script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+            script.setAttribute("data-cf-beacon", '{"token": "YOUR_CLOUDFLARE_ANALYTICS_TOKEN"}');
+            document.head.appendChild(script);
         })();
     </script>
     <script nonce="2726c7f26c">
         // Register service worker for offline capabilities
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function(err) {
+                }, function (err) {
                     console.log('ServiceWorker registration failed: ', err);
                 });
             });
@@ -112,7 +118,7 @@
     </script>
     <script nonce="2726c7f26c">
         // iOS no-bounce script
-        document.addEventListener('touchmove', function(event) {
+        document.addEventListener('touchmove', function (event) {
             event.preventDefault();
         }, { passive: false });
     </script>
