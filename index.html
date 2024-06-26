@@ -2,30 +2,26 @@
 <html>
 <head>
     <script>
-    !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};
-    d=s.createElement(q);d.src='//d1l6p2sc9645hc.cloudfront.net/gosquared.js';q=
-    s.getElementsByTagName(q)[0];q.parentNode.insertBefore(d,q)}(window,document
-    ,'script','_gs');
-
-    _gs('GSN-731670-U');
-    _gs('set', 'anonymizeIP', true);
+        !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};
+        d=s.createElement(q);d.src='//d1l6p2sc9645hc.cloudfront.net/gosquared.js';q=
+        s.getElementsByTagName(q)[0];q.parentNode.insertBefore(d,q)}(window,document
+        ,'script','_gs');
+        _gs('GSN-731670-U');
+        _gs('set', 'anonymizeIP', true);
     </script>
-
     <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
-                console.log('ServiceWorker registration failed: ', err);
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
             });
-        });
-    }
+        }
     </script>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
     <meta name="description" content="Installable progressive web app playing an industrial cyber punk YouTube remix">
     <meta name="keywords" content="Industrial, Gothic, Cyber Punk, Music Videos, Remix, YouTube Player, Playlist, Progressive Web App, PWA, HTML, JavaScript">
     <meta name="author" content="Martin Myburgh">
@@ -35,9 +31,7 @@
     <meta name="generator" content="Remixed">
     <meta name="distribution" content="global">
     <meta name="rating" content="general">
-    
     <meta name="referrer" content="no-referrer">
-    
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
@@ -52,35 +46,26 @@
     <meta name="format-detection" content="geo=no">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="tel=no">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="theme-color" content="#121212">
-
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Remixed">
-    
     <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
     <link rel="apple-touch-startup-image" href="icons/icon-512x512.png">
-
     <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32x32.png">
-
     <link rel="manifest" href="manifest.json">
-  
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@bleedinyou">
     <meta name="twitter:title" content="Remixed">
     <meta name="twitter:description" content="Installable progressive web app playing an industrial cyber punk YouTube remix">
     <meta name="twitter:image" content="https://remixed.co.za/img/bleedinyou-share.jpg">
-
     <meta property="og:title" content="Remixed" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://remixed.co.za/index.html" />
     <meta property="og:image" content="hhttps://remixed.co.za/img/bleedinyou-share.jpg" />
     <meta property="og:description" content="Installable progressive web app playing an industrial cyber punk YouTube remix" />
     <meta property="og:site_name" content="Remixed" />
-
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="fr_FR" />
     <meta property="og:locale:alternate" content="es_ES" />
@@ -103,7 +88,6 @@
     <!-- <meta property="fb:app_id" content="your_app_id"> -->
   
     <title>Remixed</title>
-
     <style>
         html, body {
             width: 100%; 
@@ -114,13 +98,11 @@
             font-size: 12px; 
         }
     </style>
-
 </head>
 <body>
-    <div id="splash-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 9999;">
+    <div id="splash-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #121212; z-index: 9999;">
         <img src="img/splash.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; height: auto;">
     </div>
-
     <iframe width="100%" height="100%" 
             src="https://www.youtube-nocookie.com/embed/videoseries?si=onkmmxLTahkfAfOc&list=PLeFMZZbxqOwr-0nbSLW83FGNrNcjo8eNk"
             title="YouTube Remix Video Player" 
@@ -129,9 +111,6 @@
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
     </iframe>
-
-    <!--src="https://www.youtube-nocookie.com/embed/videoseries?si=ILWbUCbBV0A2lks6&controls=0&list=PLeFMZZbxqOwrGFJ1F8Hhf7ckP7W1ikope"-->
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {

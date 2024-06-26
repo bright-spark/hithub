@@ -1,7 +1,7 @@
 const CACHE_NAME = 'v1';
 const urlsToCache = [
+  'favicon.ico',
   'index.html',
-  'styles.css',
   'manifest.json',
   '/img/splash.png',
   '/icons/icon-152x152.png',
