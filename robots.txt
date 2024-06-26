@@ -1,3 +1,10 @@
-# Block all robots from the entire server
+# robots.txt for Remixed website
+
+# Allow all user agents
 User-agent: *
-Disallow: /
+
+# Disallow access to icons directory
+Disallow: /icons/
+
+# Disallow access to images directory
+Disallow: /img/

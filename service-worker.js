@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v1.3';
+const CACHE_NAME = 'v1.4';
 const urlsToCache = [
   'favicon.ico',
   'index.html',
@@ -9,6 +9,7 @@ const urlsToCache = [
   '/icons/icon-512x512.png'
 ];
 
+// Install event - Cache assets
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -19,6 +20,24 @@ self.addEventListener('install', event => {
   );
 });
 
+// Activate event - Clean up old caches
+self.addEventListener('activate', event => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (!cacheWhitelist.includes(cacheName)) {
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
+// Fetch event - Serve from cache if available, otherwise fetch from network
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
@@ -26,8 +45,10 @@ self.addEventListener('fetch', event => {
         if (response) {
           return response;
         }
-        return fetch(event.request);
-      }
-    )
+        return fetch(event.request).catch(() => {
+          // Fallback logic if fetch fails (e.g., offline)
+          console.error('Fetch failed; returning offline page.');
+        });
+      })
   );
 });

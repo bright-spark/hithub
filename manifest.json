@@ -1,6 +1,7 @@
 {
   "short_name": "Remixed",
   "name": "Remixed",
+  "description": "Installable progressive web app playing an industrial cyber punk YouTube remix",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -19,9 +20,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "background_color": "#121212",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#121212"
+  "theme_color": "#121212",
+  "orientation": "portrait"
 }
