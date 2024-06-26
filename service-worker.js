@@ -1,10 +1,9 @@
-// service-worker.js
 const CACHE_NAME = 'v1';
 const urlsToCache = [
   'index.html',
   'styles.css',
   'manifest.json',
-  '/icons/default-icon.png',
+  '/img/splash.png',
   '/icons/icon-152x152.png',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png'
