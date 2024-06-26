@@ -39,11 +39,11 @@
 
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self'; 
-      script-src 'self' 'nonce-2726c7f26c'; 
-      style-src 'self' 'nonce-2726c7f26c'; 
-      img-src 'self' data:; 
+      script-src 'self' 'nonce-2726c7f26c' 'unsafe-inline' https://d1l6p2sc9645hc.cloudfront.net https://static.cloudflareinsights.com; 
+      style-src 'self' 'nonce-2726c7f26c' 'unsafe-inline'; 
+      img-src 'self' data: https://remixed.co.za; 
       font-src 'self'; 
-      object-src 'none'; 
+      connect-src 'self' https://d1l6p2sc9645hc.cloudfront.net https://cloudflareinsights.com; 
       frame-src 'self' https://www.youtube-nocookie.com; 
       base-uri 'self'; 
       form-action 'self'; 
@@ -86,6 +86,15 @@
         q=s.getElementsByTagName(q)[0];q.parentNode.insertBefore(d,q)}(window,document,'script','_gs');
         _gs('GSN-731670-U');
         _gs('set', 'anonymizeIP', true);
+    </script>
+    <script nonce="2726c7f26c">
+        // Register Cloudflare Web Analytics
+        (function() {
+          var script = document.createElement("script");
+          script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+          script.setAttribute("data-cf-beacon", '{"token": "YOUR_CLOUDFLARE_ANALYTICS_TOKEN"}');
+          document.head.appendChild(script);
+        })();
     </script>
     <script nonce="2726c7f26c">
         // Register service worker for offline capabilities
