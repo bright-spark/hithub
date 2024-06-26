@@ -1,2 +1,2 @@
-# hithub.com remixed to remixed.co.za
-HitHub YouTube Player Remixed by @bleedinyou on YT
+# remixed on remixed.co.za
+YouTube Player Remixed by @bleedinme on YT
