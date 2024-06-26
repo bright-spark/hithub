@@ -103,7 +103,7 @@
 
 <body>
     <!-- Splash screen displayed on page load -->
-    <div id="splash-screen" aria-hidden="true">
+    <div id="splash-screen" aria-hidden="true" role="presentation">
         <img src="img/splash.png" alt="Splash Screen">
     </div>
     <!-- Embed YouTube playlist in an iframe -->
@@ -113,10 +113,11 @@
             frameborder="0" 
             allow="autoplay; encrypted-media; picture-in-picture" 
             referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
+            allowfullscreen 
+            loading="lazy">
     </iframe>
     <script nonce="2726c7f26c">
-        // Hide splash screen after 1000 miliseconds
+        // Hide splash screen after 1000 milliseconds
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 document.getElementById('splash-screen').style.display = 'none';
