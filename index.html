@@ -27,19 +27,31 @@
     <meta name="twitter:site" content="@bleedinyou">
     <meta name="twitter:title" content="Remixed">
     <meta name="twitter:description" content="Installable progressive web app playing an industrial cyber punk YouTube remix">
-    <meta name="twitter:image" content="https://remixed.co.za/img/bleedinyou-share.jpg">
+    <meta name="twitter:image" content="https://remixed.co.za/img/remixedrave.jpg">
     <meta property="og:title" content="Remixed" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://remixed.co.za/index.html" />
-    <meta property="og:image" content="https://remixed.co.za/img/bleedinyou-share.jpg" />
+    <meta property="og:image" content="https://remixed.co.za/img/remixedrave.jpg" />
     <meta property="og:description" content="Installable progressive web app playing an industrial cyber punk YouTube remix" />
     <meta property="og:site_name" content="Remixed" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="fr_FR" />
     <!-- Other og:locale:alternate meta tags omitted for brevity -->
 
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self'; 
+      script-src 'self' 'nonce-2726c7f26c'; 
+      style-src 'self' 'nonce-2726c7f26c'; 
+      img-src 'self' data:; 
+      font-src 'self'; 
+      object-src 'none'; 
+      frame-ancestors 'none'; 
+      base-uri 'self'; 
+      form-action 'self'; 
+      report-uri /csp-violation-report-endpoint;">
+    
     <title>Remixed</title>
-    <style>
+    <style nonce="2726c7f26c">
         html, body {
             width: 100%;
             height: 100%;
@@ -68,7 +80,7 @@
             height: auto;
         }
     </style>
-    <script defer>
+    <script nonce="2726c7f26c">
         // Initialize GoSquared analytics with anonymized IP
         !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};
         d=s.createElement(q);d.src='//d1l6p2sc9645hc.cloudfront.net/gosquared.js';
@@ -76,7 +88,7 @@
         _gs('GSN-731670-U');
         _gs('set', 'anonymizeIP', true);
     </script>
-    <script defer>
+    <script nonce="2726c7f26c">
         // Register service worker for offline capabilities
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
@@ -97,19 +109,19 @@
     </div>
     <!-- Embed YouTube playlist in an iframe -->
     <iframe width="100%" height="100%" 
-            src="https://www.youtube-nocookie.com/embed/34H1XIjnfKM?si=fPfhlPKqASEJI7ew"
+            src="https://www.youtube-nocookie.com/embed/videoseries?si=onkmmxLTahkfAfOc&list=PLeFMZZbxqOwr-0nbSLW83FGNrNcjo8eNk"
             title="YouTube Remix Video Player" 
             frameborder="0" 
             allow="autoplay; encrypted-media; picture-in-picture" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
     </iframe>
-    <script>
-        // Hide splash screen after 3 seconds
+    <script nonce="2726c7f26c">
+        // Hide splash screen after 1000 miliseconds
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 document.getElementById('splash-screen').style.display = 'none';
-            }, 1500);
+            }, 1000);
         });
     </script>
 </body>
