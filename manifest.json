@@ -1,6 +1,6 @@
 {
   "short_name": "Remixed",
-  "name": "HitHub Remixed",
+  "name": "Remixed",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -14,8 +14,8 @@
     }
   ],
   "start_url": "index.html",
-  "background_color": "#000000",
+  "background_color": "#121212",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#000000"
+  "theme_color": "#121212"
 }
